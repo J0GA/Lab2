@@ -4,7 +4,7 @@ public class Lab1 {
         Point3d B = new Point3d();
         Point3d C = new Point3d(0.4,2.7,6.1);
         if(A.equalsTo(B) || B.equalsTo(C) || C.equalsTo(A)) {
-            System.out.println("Одна из точек равна другой");
+            System.out.println("Одна из точек равна другой, треугольник не может существовать");
         }
         else{
             System.out.println("Площадь треугольника равна: " + computeArea(A, B, C));
