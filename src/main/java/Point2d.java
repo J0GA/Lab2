@@ -27,17 +27,7 @@ public class Point2d {
         yCoord = val;
     }
 
-    public boolean equals(Object obj){
-        if (this == obj) //Сравнение ссылок
-            return true;
-
-        if (obj == null) //Переданный объект - null
-            return false;
-
-        if (!(obj instanceof Point2d)) //Если переданный объект не типа Point2d
-            return false;
-
-        Point2d point2d = (Point2d) obj; //Операция приведения типа
-        return (this.xCoord == point2d.xCoord && this.yCoord == point2d.yCoord);
+    public boolean equalsTo(Point2d obj){
+        return (this.xCoord == obj.xCoord && this.yCoord == obj.yCoord);
     }
 }
