@@ -7,7 +7,7 @@ public class Lab1 {
             System.out.println("Одна из точек равна другой");
         }
         else{
-            System.out.println(computeArea(A, B, C));
+            System.out.println("Площадь треугольника равна: " + computeArea(A, B, C));
         }
     }
 
@@ -16,6 +16,11 @@ public class Lab1 {
         double b = Point3d.distanceTo(obj2, obj3);
         double c = Point3d.distanceTo(obj1, obj3);
         double p = (a + b + c) / 2;
-        return Math.sqrt(p*(p - a)*(p - b)*(p - c));
+        double result = Math.sqrt(p*(p - a)*(p - b)*(p - c));
+        if((result*1000)%10 >= 5)
+            result=Math.ceil(result*100)/100;
+        else
+            result = Math.floor(result*100)/100;
+        return result;
     }
 }
